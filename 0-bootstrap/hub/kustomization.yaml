@@ -1,9 +1,9 @@
 resources:
  - 1-infra/1-infra.yaml
  - 2-services/2-services.yaml
- - 3-clusters/3-clusters.yaml
- - 4-apps/4-apps.yaml
- - 5-policies/5-policies.yaml
+#  - 3-clusters/3-clusters.yaml
+#  - 4-apps/4-apps.yaml
+#  - 5-policies/5-policies.yaml
 patches:
 - target:
     group: argoproj.io
@@ -12,17 +12,17 @@ patches:
   patch: |-
     - op: add
       path: /spec/source/repoURL
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+      value: https://github.com/rampadc/otp-gitops.git
     - op: add
       path: /spec/source/targetRevision
-      value: ${GIT_GITOPS_BRANCH}
+      value: master
 - target:
     group: argoproj.io
     kind: AppProject
   patch: |-
     - op: add
       path: /spec/sourceRepos/-
-      value: ${HELM_REPOURL}
+      value: https://charts.cloudnativetoolkit.dev
 - target:
     group: argoproj.io
     kind: AppProject
@@ -30,10 +30,10 @@ patches:
   patch: |-
     - op: add
       path: /spec/sourceRepos/-
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+      value: https://github.com/rampadc/otp-gitops.git
     - op: add
       path: /spec/sourceRepos/-
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_INFRA}
+      value: https://github.com/rampadc/otp-gitops-infra.git
 - target:
     group: argoproj.io
     kind: AppProject
@@ -41,10 +41,10 @@ patches:
   patch: |-
     - op: add
       path: /spec/sourceRepos/-
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+      value: https://github.com/rampadc/otp-gitops.git
     - op: add
       path: /spec/sourceRepos/-
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_SERVICES}
+      value: https://github.com/rampadc/otp-gitops-services.git
 - target:
     group: argoproj.io
     kind: AppProject
@@ -52,10 +52,10 @@ patches:
   patch: |-
     - op: add
       path: /spec/sourceRepos/-
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+      value: https://github.com/rampadc/otp-gitops.git
     - op: add
       path: /spec/sourceRepos/-
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_APPLICATIONS}
+      value: https://github.com/rampadc/otp-gitops-apps.git
 - target:
     group: argoproj.io
     kind: AppProject
@@ -63,10 +63,10 @@ patches:
   patch: |-
     - op: add
       path: /spec/sourceRepos/-
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+      value: https://github.com/rampadc/otp-gitops.git
     - op: add
       path: /spec/sourceRepos/-
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_CLUSTERS}
+      value: https://github.com/rampadc/otp-gitops-clusters.git
 - target:
     group: argoproj.io
     kind: AppProject
@@ -74,10 +74,10 @@ patches:
   patch: |-
     - op: add
       path: /spec/sourceRepos/-
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS}
+      value: https://github.com/rampadc/otp-gitops.git
     - op: add
       path: /spec/sourceRepos/-
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_POLICIES}
+      value: https://github.com/rampadc/otp-gitops-policies.git
 - target:
     group: argoproj.io
     kind: Application

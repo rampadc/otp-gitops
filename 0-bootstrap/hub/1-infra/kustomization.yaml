@@ -11,8 +11,8 @@ resources:
  - argocd/rbac/rbac-external-secrets.yaml
  - argocd/namespaces/namespace-external-secrets.yaml
  
- - argocd/namespaces/namespace-sealed-secrets.yaml
- - argocd/namespaces/namespace-tools.yaml
+#  - argocd/namespaces/namespace-sealed-secrets.yaml
+#  - argocd/namespaces/namespace-tools.yaml
 
  # Observability
  #- argocd/namespaces/namespace-turbonomic.yaml
@@ -30,7 +30,7 @@ resources:
  #- argocd/namespaces/namespace-metal-provisioner.yaml
  
  # Ansible Automation Platform
- - argocd/namespaces/namespace-ansible-automation-platform.yaml
+#  - argocd/namespaces/namespace-ansible-automation-platform.yaml
  
  # OpenShift Virtualization (Can be used to host Instana Instance)
  #- argocd/rbac/rbac-openshift-virtualization.yaml
@@ -58,16 +58,16 @@ resources:
  
  # OpenShift Data Foundation aka OpenShift Container Storage
  #- unneeded for IBM Cloud ROKS with ODF add-on configured
- - argocd/namespaces/namespace-openshift-storage.yaml
- - argocd/storage.yaml
+#  - argocd/namespaces/namespace-openshift-storage.yaml
+#  - argocd/storage.yaml
  
  # MachineSets and Infra Nodes
  #- unneeded for IBM Cloud ROKS with ODF add-on configured
- - argocd/machinesets.yaml
- - argocd/infraconfig.yaml
+#  - argocd/machinesets.yaml
+#  - argocd/infraconfig.yaml
  
  # Console link
- - argocd/consolelink.yaml
+#  - argocd/consolelink.yaml
 
 patches:
 - target:
@@ -77,7 +77,7 @@ patches:
   patch: |-
     - op: add
       path: /spec/source/repoURL
-      value: ${GIT_BASEURL}/${GIT_ORG}/${GIT_GITOPS_INFRA}
+      value: https://github.com/rampadc/otp-gitops-infra.git
     - op: add
       path: /spec/source/targetRevision
-      value: ${GIT_GITOPS_BRANCH}
+      value: master
