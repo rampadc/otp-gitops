@@ -30,8 +30,9 @@ spec:
 
         provider:
           region: ap-southeast-2
-          baseDomain: mutihybridcloudkitchen.com
-          sshPublickey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDHNPy2KYhFVrmE49K+stN0SNOzWZdn2pQstns6Mw78J6SlA19eX38D0wt2SXE8b9ybKUngigZuab7yFoVbBl/fUqxo8xNu+rLj/dS/eAhPAI9QDPWIf0T/Qmmd5bJz+guDYDr/eU96Wt/MLvVcF3WAj1IDhzct1ek57AmFSSg8vemvr0XveiAHlXYomtvaBlBQrpzq/U9/5Bw3yPOcl/wGdhsNUg+nBTChVn5wk2plS7HPRoRV+w4TcuzhdAyM77PpC04PpnZGrH3e4s6HiCKtBy2Vu1nhZotmOkaRjst0Y1cQDU8c34G3BNt/LbjUGnZ4kVIkhLsQdky8we2kdPtsaZxlIDm2B0CZ+oBw8iisq0nVGRz5eG4ry7UzCMwzgQa5SGJhsBNVm7qhmWYmTIHQ7t4byV/1GxBFi01/oM/Xgvbn7eletzJ8sbB+ZW9QuY9lrzdzzP3joq++bRSes+dodzEf6A+Y37GY72GHaZkh2GZtx9F5l5EL7d7qyo5nUhjeMquw4QF7/dcbzkO6mh139lQGGVGf7+1qz8/YZcUlZBy6ETidwcJmEk/p8gZuUUs+NKw56AkVxo6jN5hNzOlz/cklLrmiD9X4VjuA+uE6dl5r+mtSXt3MswI3udlM1wFjlnvyGulNRnkhVqmv0Sp21dWiH4yQ2tOSWlaoMY0BtQ== benswinney
+          baseDomain: activation-assets.com
+          sshPublickey: ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQDHw4o3MB10Xx43r7SFfi1OGwg6AZ4MNyKfGBuCOf6qzio2SqroHnri17Urg9IWdYwrZIIHedS5dl3s2vz6/lH9/chrxlST7wFc21MfK1IHkXEGaz11l5M+wtx25eFfNVJ08XNDjeLPT7eEviS83MGf966unw3GoKEv2AvcdS2OdrtunC/kbneMJgxYrspmUmpFhJm3Fr+KJyUK26QVRvA1c6lt6XdOzzA5NSpHC4YppN5R0s32pcm/63qwTat+639A9kRpCdzxNEuG/BUv3mRmEseLkK9UCqdmIW/VT/O/tY/wl0dWCVqnwrOmVOWG6pD64S94uhTAJ8HvWzmA6lu69eH2N3WM+me1kiwDfHDbi0sxgpTvU1FhvhwLnU6E7kd7SKMf7svoC0b1n/FOI/dn+jH/vx9leExZYq0ugxluRUlMwNyozLFGZFEVGQ2J3lU29eAGUwOKyJSF3LvTQV49S+jYWjLMVHnZL50R9jg3AryG8Wn30gxeqzqgFMF8uP31ED+MTb0pBU18aLU0f849huLniEFB6uiQ9SD23Pl1X1R20ObEtKkj5wfEv6NNg09heoGZACciZrEt5jhZflxXT44HApUtxvftZiPmoIAQinqowfV5m+h9m+7HQrHBUgBZmluHvugYi5ueIciPf+eyxodLOuY2eMGzEnOqqGj/aQ== cong.nguyen@au1.ibm.com
+
 
         workers:
-          count: 2
+          count: 3
