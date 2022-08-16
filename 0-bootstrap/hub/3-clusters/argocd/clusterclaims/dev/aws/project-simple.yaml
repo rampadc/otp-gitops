@@ -27,6 +27,6 @@ spec:
 
         managedCluster: 
           status: "enabled"
-          managedRepo: https://github.com/testing-gitops/otp-gitops.git
+          managedRepo: https://github.com/rampadc/otp-gitops.git
           environment: dev  
           projectName: project-simple
