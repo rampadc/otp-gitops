@@ -4,7 +4,6 @@ metadata:
   name: clusters-clusterclaim-aws-dev-project-simple
   annotations:
     argocd.argoproj.io/sync-wave: "360"
-    argocd.argoproj.io/compare-options: IgnoreExtraneous
   labels:
     gitops.tier.layer: clusters
   finalizers:
@@ -12,7 +11,7 @@ metadata:
 spec:
   syncPolicy:
     automated:
-      prune: true
+      prune: false
       selfHeal: true
   destination:
     namespace: openshift-gitops
