@@ -1,6 +1,6 @@
 resources:
  # Console Banner
- - argocd/consolenotification.yaml
+#  - argocd/consolenotification.yaml
  
  #- argocd/namespaces/namespace-ibm-common-services.yaml
  #- argocd/namespaces/namespace-cloudpak.yaml
@@ -8,8 +8,8 @@ resources:
  #- argocd/namespaces/namespace-cert-manager.yaml
  
  # External Secrets
- - argocd/rbac/rbac-external-secrets.yaml
- - argocd/namespaces/namespace-external-secrets.yaml
+#  - argocd/rbac/rbac-external-secrets.yaml
+#  - argocd/namespaces/namespace-external-secrets.yaml
  
 #  - argocd/namespaces/namespace-sealed-secrets.yaml
 #  - argocd/namespaces/namespace-tools.yaml
@@ -18,19 +18,19 @@ resources:
  #- argocd/namespaces/namespace-turbonomic.yaml
  #- argocd/namespaces/namespace-instana-agent.yaml
 
- # Red Hat Advanced Cluster Management
- - argocd/rbac/rbac-rhacm.yaml
- - argocd/namespaces/namespace-openshift-acm.yaml
- - argocd/namespaces/namespace-openshift-acm-observability.yaml
- - argocd/namespaces/namespace-rhacm-credentials.yaml
- - argocd/namespaces/namespace-policies.yaml
- - argocd/namespaces/namespace-rhacm-clusterpools.yaml
- - argocd/namespaces/namespace-rhacm-clusterclaims.yaml
+#  # Red Hat Advanced Cluster Management
+#  - argocd/rbac/rbac-rhacm.yaml
+#  - argocd/namespaces/namespace-openshift-acm.yaml
+#  - argocd/namespaces/namespace-openshift-acm-observability.yaml
+#  - argocd/namespaces/namespace-rhacm-credentials.yaml
+#  - argocd/namespaces/namespace-policies.yaml
+#  - argocd/namespaces/namespace-rhacm-clusterpools.yaml
+#  - argocd/namespaces/namespace-rhacm-clusterclaims.yaml
  # RHACM Metal Provisioner (Not required if Hub is running on Bare-Metal)
  #- argocd/namespaces/namespace-metal-provisioner.yaml
  
  # Ansible Automation Platform
-#  - argocd/namespaces/namespace-ansible-automation-platform.yaml
+ - argocd/namespaces/namespace-ansible-automation-platform.yaml
  
  # OpenShift Virtualization (Can be used to host Instana Instance)
  #- argocd/rbac/rbac-openshift-virtualization.yaml
@@ -54,7 +54,7 @@ resources:
  #- argocd/namespaces/namespace-ibm-cp4mcm.yaml
 
  # Quay Registry
- - argocd/namespaces/namespace-quay-registry.yaml
+#  - argocd/namespaces/namespace-quay-registry.yaml
  
  # OpenShift Data Foundation aka OpenShift Container Storage
  #- unneeded for IBM Cloud ROKS with ODF add-on configured
